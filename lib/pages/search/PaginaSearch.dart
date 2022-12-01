@@ -25,11 +25,35 @@ class PaginaSearch extends StatelessWidget {
               ),
             ),
           ),
+          //body: const SearchInput()
           body: Column(
+            children: const <Widget>[
+              Expanded(child: SearchInput(),)
+            ],
+          ),
+            /*Column(
+            children: const [
+              Expanded(child: SearchInput(),)
+            ],*/
+            /*child: Column(
+              children: const [
+                SizedBox(
+                  height: 1.0,
+                ),
+                SearchInput(),
+              ],
+            ),*/
+              /*children:const [
+                Expanded(
+                    child: SearchInput(),
+                )
+              ]*/
+        //del git
+        /*          body: Column(
           children: const <Widget>[
             SearchInput(),
           ],
-          ),
+          ),*/
       ),
     );
   }
@@ -81,14 +105,16 @@ class _SearchInputState extends State<SearchInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+      margin: const EdgeInsets.fromLTRB(20, 20, 20, 10),
       child: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Widget>[
             Row(
               children: [
                 Flexible(
-                  flex: 1,
+                  flex: 1
+
+                  ,
                   child: TextField(
                     cursorColor: Colors.grey,
                     decoration: InputDecoration(
@@ -111,7 +137,7 @@ class _SearchInputState extends State<SearchInput> {
                     ),
                   ),
                 ),
-                Container(
+                /*Container(
                     margin: const EdgeInsets.only (left: 10),
                     padding: const EdgeInsets.all(9),
                     decoration: BoxDecoration(
@@ -121,7 +147,7 @@ class _SearchInputState extends State<SearchInput> {
                     width: 45,
                     child: Image.asset(
                         'assets/1159641.png')
-                ),
+                ),*/
               ],
             ),
             Container(
